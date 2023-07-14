@@ -1,11 +1,6 @@
-
-
-
 .main {
   height: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 100px;
+  padding-top: 59px;
 }
 
 .container {
@@ -13,17 +8,36 @@
   padding: .6rem;
 }
 
+.ajust {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+}
+
+
+.image {
+  width: 100%;
+}
+
 
 
 @keyframes animate-animar-cursor {
   0% {
     color: rgb(124 58 237);
-  };
+  }
+
+  ;
+
   100% {
-    color: rgba(0,0,0,0);
+    color: rgba(0, 0, 0, 0);
   }
 }
 
-.animate-animar-cursor{
+.animate-animar-cursor {
   animation: animate-animar-cursor 1s infinite;
+}
+
+@media (min-width: 640px) {
+  .ajust {
+    grid-template-columns: auto auto 1fr;
+  }
 }

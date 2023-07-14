@@ -12,7 +12,7 @@ const DescriptionCard = (props) => {
           <div className="ml-auto">
             <figure className="relative max-w-xs transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
               <a href="/">
-                <img className="rounded-lg" src={props.src} alt="image description" />
+                <img className="rounded-lg shadow-lg dark:shadow-black/30" src={props.src} alt="image description" />
               </a>
               <figcaption className="absolute px-4 text-lg text-white bottom-6">
                 <p>{props.alt}</p>
