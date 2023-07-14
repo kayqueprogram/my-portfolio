@@ -1,0 +1,29 @@
+
+
+
+.main {
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 100px;
+}
+
+.container {
+  margin-bottom: .9rem;
+  padding: .6rem;
+}
+
+
+
+@keyframes animate-animar-cursor {
+  0% {
+    color: rgb(124 58 237);
+  };
+  100% {
+    color: rgba(0,0,0,0);
+  }
+}
+
+.animate-animar-cursor{
+  animation: animate-animar-cursor 1s infinite;
+}
