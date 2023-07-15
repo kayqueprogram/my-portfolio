@@ -44,6 +44,7 @@ function Home() {
             {intro?.content && (
                 <div className="mx-auto ajust container bg-gray-200 py-10">
                     <div className="mx-auto">
+                        <h1 className="text-4xl">{intro.title}</h1>
                         {breakStr(intro?.content)?.map(cont => <CardContent>{cont}</CardContent>)}
                     </div>
 
