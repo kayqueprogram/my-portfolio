@@ -3,6 +3,9 @@ import introApi from '../services/intoducingme/index';
 import { breakStr } from '../shared/utils/breakStr';
 import Typewriter from 'typewriter-effect'
 import CardContent from '../shared/layout/CardContent';
+import DescriptionCard from '../shared/layout/DescriptionCard';
+import Column from '../shared/layout/Column';
+import Title from '../shared/layout/Title';
 
 function Home() {
 
@@ -21,7 +24,7 @@ function Home() {
 
     return (
         <>
-            <div className="text-2xl container bg-gray-200 justify-center text-center py-10  mx-auto">
+            <div className="text-2xl bg-gray-200 justify-center text-center py-10 p-5 mx-auto">
                 <h1 className="text-4xl">💻 Creating the future with lines of code</h1>
                 <br />
                 <Typewriter
@@ -42,7 +45,7 @@ function Home() {
 
             </div>
             {intro?.content && (
-                <div className="mx-auto ajust container bg-gray-200 py-10">
+                <div className="mx-auto ajust container  py-10">
                     <div className="mx-auto">
                         <h1 className="text-4xl">{intro.title}</h1>
                         {breakStr(intro?.content)?.map(cont => <CardContent>{cont}</CardContent>)}
@@ -54,6 +57,15 @@ function Home() {
                         )}
 
                     </div>
+                </div>
+            )}
+
+            {intro?.skills && (
+                <div className='container'>
+                    <Title>My Skills</Title>
+                    <Column>
+                        {intro?.skills?.map(cont => <DescriptionCard>{cont}</DescriptionCard>)}
+                    </Column>
                 </div>
             )}
         </>

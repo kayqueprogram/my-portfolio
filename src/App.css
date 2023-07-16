@@ -13,6 +13,12 @@
   grid-template-columns: auto auto 1fr;
 }
 
+.ajust2 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+
 
 .image {
   width: 100%;
