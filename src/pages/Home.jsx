@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import introApi from '../services/intoducingme/index';
+import projectsApi from '../services/projects';
 import { breakStr } from '../shared/utils/breakStr';
 import Typewriter from 'typewriter-effect'
 import CardContent from '../shared/layout/CardContent';
@@ -14,14 +15,32 @@ function Home() {
 
     useEffect(() => {
         const getIntro = async () => {
-            //lidar com erro aq
-            const data = await introApi.getIntro();
-            setIntro(data)
+
+            try {
+                const data = await introApi.getIntro();
+                setIntro(data)
+            } catch (err) {
+                console.log('erro na api intro: ', err)
+            }
         };
 
         getIntro();
     }, []);
 
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+      const getProjects = async () => {
+        try {
+          const data = await projectsApi.getProjectPosts();
+          setProjects(data);
+        } catch (err) {
+          console.log('erro na projectsApi: ', err);
+        }
+      };
+  
+      getProjects();
+    }, []);
 
     return (
         <>
@@ -58,7 +77,7 @@ function Home() {
 
                     <div className='container'>
                         {intro?.img && (
-                            <img class=" h-auto image" src={intro.img} alt="image description" />
+                            <img class=" h-auto max-w-xs mx-auto image rounded-3xl" src={intro.img} alt="image description" />
                         )}
 
                     </div>
@@ -77,9 +96,14 @@ function Home() {
             <div className="container">
                 <Title>My Projects</Title>
                 <Column>
-                    <CardProject/>
-                    <CardProject/>
-                    <CardProject/>
+                    {projects.map(project => (
+                        <CardProject 
+                            title={project.title} 
+                            description={project.description} 
+                            src={project.src} 
+                            link={project.link} 
+                        />
+                    ))}
                 </Column>
             </div>
         </>

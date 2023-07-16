@@ -5,7 +5,7 @@ import { Footer } from 'flowbite-react';
 
 function DefaultFooter() {
   return (
-    <Footer container>
+    <Footer container className="justify-between">
       <Footer.Copyright
         by="Sirius.sh™"
         href="https://github.com/kayqueprogram"
