@@ -3,6 +3,7 @@ import introApi from '../services/intoducingme/index';
 import { breakStr } from '../shared/utils/breakStr';
 import Typewriter from 'typewriter-effect'
 import CardContent from '../shared/layout/CardContent';
+import CardProject from '../shared/layout/CardProject';
 import DescriptionCard from '../shared/layout/DescriptionCard';
 import Column from '../shared/layout/Column';
 import Title from '../shared/layout/Title';
@@ -75,7 +76,11 @@ function Home() {
 
             <div className="container">
                 <Title>My Projects</Title>
-                development...
+                <Column>
+                    <CardProject/>
+                    <CardProject/>
+                    <CardProject/>
+                </Column>
             </div>
         </>
     )

@@ -7,7 +7,7 @@ export default function Column({children}) {
             <div className="mx-auto text-2xl flex  justify-center  text-center py-10  ">
             
             <br />
-            <div className="mx-2 flex flex-wrap ">
+            <div className="mx-2 flex flex-wrap whitespace-break-spaces">
                   {children}
             </div>
         </div>
