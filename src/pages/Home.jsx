@@ -38,6 +38,10 @@ function Home() {
                             .pauseFor(1000)
                             .deleteAll()
                             .typeString("I'm Kayque, programmer and web developer")
+                            .pauseFor(1000)
+                            .deleteAll()
+                            .typeString('I drink more coffee than water, and make the shower cry in the argument 🙃')
+
                             .start();
                     }}
                 />
@@ -68,6 +72,11 @@ function Home() {
                     </Column>
                 </div>
             )}
+
+            <div className="container">
+                <Title>My Projects</Title>
+                development...
+            </div>
         </>
     )
 }
