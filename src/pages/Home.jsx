@@ -85,7 +85,7 @@ function Home() {
             )}
 
             {intro?.skills && (
-                <div className='container'>
+                <div className='mx-auto ajust container  py-10'>
                     <Title>My Skills</Title>
                     <Column>
                         {intro?.skills?.map(cont => <DescriptionCard>{cont}</DescriptionCard>)}
@@ -93,7 +93,7 @@ function Home() {
                 </div>
             )}
 
-            <div className="container">
+            <div className="mx-auto ajust container  py-10">
                 <Title>My Projects</Title>
                 <Column>
                     {projects.map(project => (
