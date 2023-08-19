@@ -18,6 +18,9 @@
   grid-template-columns: auto 1fr;
 }
 
+.mx-top-1 {
+  margin-top: 15px;
+}
 
 .margin-top {
   margin-top: 1rem;
