@@ -3,10 +3,12 @@ import introApi from '../services/intoducingme/index';
 import projectsApi from '../services/projects';
 import { breakStr } from '../shared/utils/breakStr';
 import Typewriter from 'typewriter-effect'
+import cutString from '../shared/utils/cutString';
 import CardContent from '../shared/layout/CardContent';
 import CardProject from '../shared/layout/CardProject';
 import DescriptionCard from '../shared/layout/DescriptionCard';
 import Column from '../shared/layout/Column';
+import { Link } from 'react-router-dom';
 import Title from '../shared/layout/Title';
 
 function Home() {
@@ -105,11 +107,14 @@ function Home() {
                     <Column>
                         {projects.map(project => (
                             <CardProject
-                                title={project.title}
-                                description={project.description}
-                                src={project.src}
-                                link={project.link}
-                            />
+                            key={project.id} // Make sure to add the key
+                            title={project.title}
+                            description={project.description}
+                            src={project.src}
+                            link={`/project/${project.id}`}
+                          />
+                            
+                          
                         ))}
                     </Column>
                 </div>
@@ -117,5 +122,6 @@ function Home() {
         </>
     )
 }
+
 
 export default Home

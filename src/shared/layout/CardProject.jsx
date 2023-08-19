@@ -1,4 +1,6 @@
 import React from 'react';
+import cutString from '../utils/cutString';
+import { breakStr } from '../utils/breakStr';
 
 export default function CardProject({ title, description, src, link }) {
   return (
@@ -10,14 +12,14 @@ export default function CardProject({ title, description, src, link }) {
         <a href="#">
           <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">{title}</h5>
         </a>
-        <p className="mb-3 text-gray-700 dark:text-gray-400">{description}</p>
+        <p className="mb-3 text-gray-700 dark:text-gray-400">{cutString(description, 93)}...</p>
         <a
           href={link}
-          target="_blank"
+          target="_parent"
           rel="noopener noreferrer"
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
-          View Repo
+          View Page
           <svg
             className="w-4 h-4 ml-2"
             aria-hidden="true"
@@ -34,6 +36,7 @@ export default function CardProject({ title, description, src, link }) {
             />
           </svg>
         </a>
+
       </div>
     </div>
   );
