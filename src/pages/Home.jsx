@@ -30,16 +30,16 @@ function Home() {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-      const getProjects = async () => {
-        try {
-          const data = await projectsApi.getProjectPosts();
-          setProjects(data);
-        } catch (err) {
-          console.log('erro na projectsApi: ', err);
-        }
-      };
-  
-      getProjects();
+        const getProjects = async () => {
+            try {
+                const data = await projectsApi.getProjectPosts();
+                setProjects(data);
+            } catch (err) {
+                console.log('erro na projectsApi: ', err);
+            }
+        };
+
+        getProjects();
     }, []);
 
     return (
@@ -86,25 +86,33 @@ function Home() {
 
             {intro?.skills && (
                 <div className='mx-auto ajust container  py-10'>
-                    <Title>My Skills</Title>
-                    <Column>
-                        {intro?.skills?.map(cont => <DescriptionCard>{cont}</DescriptionCard>)}
-                    </Column>
+
+                    <div className="mx-auto">
+                        <Title>My Skills</Title>
+
+                        <Column>
+                            {intro?.skills?.map(cont => <DescriptionCard>{cont}</DescriptionCard>)}
+                        </Column>
+                    </div>
+
+
                 </div>
             )}
 
             <div className="mx-auto ajust container  py-10">
-                <Title>My Projects</Title>
-                <Column>
-                    {projects.map(project => (
-                        <CardProject 
-                            title={project.title} 
-                            description={project.description} 
-                            src={project.src} 
-                            link={project.link} 
-                        />
-                    ))}
-                </Column>
+                <div className="mx-auto">
+                    <Title>My Projects</Title>
+                    <Column>
+                        {projects.map(project => (
+                            <CardProject
+                                title={project.title}
+                                description={project.description}
+                                src={project.src}
+                                link={project.link}
+                            />
+                        ))}
+                    </Column>
+                </div>
             </div>
         </>
     )
