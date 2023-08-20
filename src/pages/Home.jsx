@@ -111,7 +111,7 @@ function Home() {
                             title={project.title}
                             description={project.description}
                             src={project.src}
-                            link={`/project/${project.id}`}
+                            link={`/projects/${project.id}`}
                           />
                             
                           
