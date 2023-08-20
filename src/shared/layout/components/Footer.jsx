@@ -12,11 +12,11 @@ function DefaultFooter() {
         year={2023}
       />
       <Footer.LinkGroup>
-        <Footer.Link href="#">
-          Sobre
+        <Footer.Link href="/projects">
+          Projects
         </Footer.Link>
-        <Footer.Link href="#">
-          Contato
+        <Footer.Link href="/contact">
+          Contact
         </Footer.Link>
       </Footer.LinkGroup>
     </Footer>
