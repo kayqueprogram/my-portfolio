@@ -28,7 +28,7 @@ const ProjectDetail = () => {
     return (
         <div>
             <div className="mx-auto ajust container  py-10">
-                {project ? (
+                {project?.title && (
                     <div>
                         <div className="container mx-auto">
                             <div className="mx-auto container">
@@ -104,9 +104,7 @@ const ProjectDetail = () => {
                         </div>
 
                     </div>
-                ) : (
-                    <p>Loading project details...</p>
-                )}
+                ) }
             </div>
         </div>
     );

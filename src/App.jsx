@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Home from './pages/Home';
+import Index from './pages/projects/Index';
 import ProjectDetail from './pages/projects/ProjectDetails';
 import Header from './shared/layout/components/Header';
 import DefaultFooter from './shared/layout/components/Footer';
@@ -17,6 +18,7 @@ function App() {
      <Main>
      <Routes>
        <Route exact path='/' element={<Home />} />
+       <Route exact path='/projects' element={<Index/>} />
        <Route path="/projects/:id" element={<ProjectDetail/>} />
       </Routes>
      </Main>
