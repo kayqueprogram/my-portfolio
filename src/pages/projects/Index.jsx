@@ -23,9 +23,9 @@ const Index = () => {
 
     return (
         <div className="container mx-auto py-10">
-            <h1 className="text-4xl font-semibold mb-6">Projects</h1>
+            <h1 className="text-4xl font-semibold mb-6">Projetos</h1>
             {loading ? (
-                <p>Loading projects...</p>
+                <p>Carregando projetos...</p>
             ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {projects.map(project => (

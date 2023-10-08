@@ -55,14 +55,14 @@ function Home() {
 
                         typewriter
 
-                            .typeString("Hello! Welcome to my Portfolio!")
+                            .typeString("Olá! Bem vindo ao meu portfólio")
 
                             .pauseFor(1000)
                             .deleteAll()
-                            .typeString("I'm Kayque, programmer and web developer")
+                            .typeString("Meu nome é Kayque, Programador e Desenvolvedor web")
                             .pauseFor(1000)
                             .deleteAll()
-                            .typeString('I drink more coffee than water, and make the shower cry in the argument 🙃')
+                            .typeString('Bebo mais café do que água, e faço o chuveiro chorar no argumento 🙃')
 
                             .start();
                     }}
@@ -90,7 +90,7 @@ function Home() {
                 <div className='mx-auto ajust container  py-10'>
 
                     <div className="mx-auto">
-                        <Title>My Skills</Title>
+                        <Title>Minhas Skills</Title>
 
                         <Column>
                             {intro?.skills?.map(cont => <DescriptionCard>{cont}</DescriptionCard>)}
@@ -103,7 +103,7 @@ function Home() {
 
             <div className="mx-auto ajust container  py-10">
                 <div className="mx-auto">
-                    <Title>My Projects</Title>
+                    <Title>Meus Projetos</Title>
                     <Column>
                         {projects.map(project => (
                             <CardProject

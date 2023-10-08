@@ -13,10 +13,10 @@ function DefaultFooter() {
       />
       <Footer.LinkGroup>
         <Footer.Link href="/projects">
-          Projects
+          Projetos
         </Footer.Link>
         <Footer.Link href="/contact">
-          Contact
+          Contato
         </Footer.Link>
       </Footer.LinkGroup>
     </Footer>

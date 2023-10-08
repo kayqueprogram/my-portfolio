@@ -25,15 +25,15 @@ const Contact = () => {
 
     return (
         <div className="mx-auto container py-10">
-            <h1 className="text-3xl font-semibold mb-6">Contact me - Sirius.sh</h1>
+            <h1 className="text-3xl font-semibold mb-6">Contate-me - Sirius.sh</h1>
 
-            <h2 className="text-xl font-semibold mb-4">Details</h2>
+            <h2 className="text-xl font-semibold mb-4">Detalhes</h2>
             <p className="mb-4">
-            If you prefer, you can contact me directly by the following means:
+            Se preferir, pode contatar-me diretamente pelos seguintes meios:
             </p>
             <p className="mb-4">Email: {contact.email}</p>
             
-            <h2 className="text-xl font-semibold mb-4">Social Media</h2>
+            <h2 className="text-xl font-semibold mb-4">Redes Sociais</h2>
             <div className="flex space-x-4">
                 {contact?.twitter && (
                     <a href={contact.twitter} className="text-blue-500 hover:text-blue-700">

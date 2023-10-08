@@ -57,7 +57,7 @@ function Header() {
                 aria-current="page"
                 to="/projects"
               >
-                Projects
+                Projetos
               </Link>
             </li>
             {/*<li>
@@ -79,7 +79,7 @@ function Header() {
                 aria-current="page"
                 to="/contact"
               >
-                Contact
+                Contato
               </Link>
             </li>
             
