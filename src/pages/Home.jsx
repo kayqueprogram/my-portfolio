@@ -47,7 +47,7 @@ function Home() {
     return (
         <>
             <div className="text-2xl bg-gray-200 justify-center text-center py-10 p-5 mx-auto">
-                <h1 className="text-4xl">💻 Creating the future with lines of code</h1>
+                <h1 className="text-4xl">💻 Criando o futuro com linhas de código</h1>
                 <br />
                 <Typewriter
 
